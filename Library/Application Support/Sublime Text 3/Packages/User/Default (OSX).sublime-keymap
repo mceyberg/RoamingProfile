@@ -1,0 +1,33 @@
+[
+	// Change key bindings to select previous and next tabs to ctrl+tab and ctrl+shift+tab
+	// Defaults are super+shift+[ and super+shift+]
+	// This overwrites prev_view_in_stack and next_view_in_stack
+	{ "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+	{ "keys": ["ctrl+tab"], "command": "next_view" },
+
+	// Add key binding to save with ctrl+s
+	{ "keys": ["ctrl+s"], "command": "save" },
+	{ "keys": ["ctrl+z"], "command": "undo" },
+	// Overwrites default key binding to yank
+	{ "keys": ["ctrl+y"], "command": "redo" },
+
+	{ "keys": ["ctrl+w"], "command": "close" },
+
+	{ "keys": ["f1"], "command": "goto_definition" },
+
+	{ "keys": ["ctrl+shift+c"], "command": "toggle_comment", "args": { "block": false } },
+
+
+	{ "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+
+	{ "keys": ["ctrl+shift+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"} },
+
+	{ "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"} },
+	{ "keys": ["ctrl+shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"} },
+
+	{ "keys": ["ctrl+shfit+f"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+
+
+	{ "keys": ["super+up"], "command": "swap_line_up" },
+	{ "keys": ["super+down"], "command": "swap_line_down" },
+]
