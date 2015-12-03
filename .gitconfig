@@ -3,3 +3,10 @@
 # Please adapt and uncomment the following lines:
 	name = Mark Eyberg
 	email = mceyberg@gmail.com
+[push]
+	default = simple
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
