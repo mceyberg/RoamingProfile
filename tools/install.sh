@@ -1,21 +1,18 @@
 #!/bin/bash
 
+# We need to be in our home directory to run this.
+pushd ~
+
 # Pull down the roaming profile repo
 git clone https://github.com/mceyberg/roaming_profile.git ~/.roaming_profile
-
-# Back the specified file up if a copy exists already
-backup () {
-  if [ -f "../$1" ]; then
-    echo "Backing up file $1"
-    mv "../$1" "../$1.backup"
-  fi
-}
 
 # All the config files
 declare -a configs=(.bash_aliases .gitconfig .gitignore .pryrc .vimrc .warprc)
 
+# Create soft links for all configuration files in .roaming_profile.
+# Back the specified file up if a copy exists already with the .backup suffix
 for config_file in ${config}; do
-  backup ${config_file} && ln -s ${config_file} ..
+  ln --backup=backup -s .roaming_profile/${config_file}
 done
 
 # Install Oh-My-Zsh
@@ -33,3 +30,6 @@ if [[ "uname" == 'Darwin' ]]; then
   ln -s $sublime_app_dir/Default\ \(OSX\).sublime-keymap ~/$sublime_app_dir/
   ln -s $sublime_app_dir/Preferences.sublime-settings ~/$sublime_app_dir/
 fi
+
+popd
+
