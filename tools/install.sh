@@ -11,7 +11,7 @@ declare -a configs=( ".bash_aliases" ".gitconfig" ".gitignore" "git.pryrc" ".vim
 
 # Create soft links for all configuration files in .roaming_profile.
 # Back the specified file up if a copy exists already with the .backup suffix
-for config_file in ${config}; do
+for config_file in ${configs[*]}; do
   ln --backup --suffix=backup -s .roaming_profile/${config_file}
 done
 
@@ -21,6 +21,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # Install Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+vim +source % +qall
 # Run the 'PluginInstall' command to load all the plugins set in .vimrc
 vim +PluginInstall +qall
 
