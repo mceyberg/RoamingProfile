@@ -7,12 +7,12 @@ pushd ~
 env git clone https://github.com/mceyberg/RoamingProfile.git ~/.roaming_profile
 
 # All the config files
-declare -a configs=( ".bash_aliases" ".gitconfig" ".gitignore" "git.pryrc" ".vimrc" ".warprc" )
+configs=( ".bash_aliases" ".gitconfig" ".gitignore" ".pryrc" ".vimrc" ".warprc" ".zshrc" )
 
 # Create soft links for all configuration files in .roaming_profile.
 # Back the specified file up if a copy exists already with the .backup suffix
 for config_file in ${configs[*]}; do
-  ln --backup --suffix=backup -s .roaming_profile/${config_file}
+  ln --backup --suffix=.backup -s .roaming_profile/${config_file}
 done
 
 # Install Oh-My-Zsh
