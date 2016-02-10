@@ -53,7 +53,7 @@ plugins=(git dircycle wd)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -83,6 +83,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source ~/.bash_aliases
+if [ -f ~/.bash_aliases ]; then
+  source ~/.bash_aliases
+fi
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
