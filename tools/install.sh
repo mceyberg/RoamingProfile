@@ -7,7 +7,7 @@ pushd ~
 env git clone https://github.com/mceyberg/RoamingProfile.git ~/.roaming_profile
 
 # All the config files
-configs=( ".bash_aliases" ".gitconfig" ".gitignore" ".pryrc" ".vimrc" ".warprc" )
+configs=( ".bash_aliases" ".gitconfig" ".gitignore" ".pryrc" ".vimrc" ".warprc" ".zshrc" )
 
 # Create soft links for all configuration files in .roaming_profile.
 # Back the specified file up if a copy exists already with the .backup suffix
