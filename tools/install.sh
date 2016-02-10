@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Pull down the roaming profile repo
+git clone https://github.com/mceyberg/roaming_profile.git ~/.roaming_profile
+
 # Back the specified file up if a copy exists already
 backup () {
   if [ -f "../$1" ]; then
