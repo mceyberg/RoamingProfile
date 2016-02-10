@@ -4,7 +4,7 @@
 pushd ~
 
 # Pull down the roaming profile repo
-git clone https://github.com/mceyberg/RoamingProfile.git ~/.roaming_profile
+git clone git@github.com:mceyberg/RoamingProfile.git ~/.roaming_profile
 
 # All the config files
 declare -a configs=(.bash_aliases .gitconfig .gitignore .pryrc .vimrc .warprc)
