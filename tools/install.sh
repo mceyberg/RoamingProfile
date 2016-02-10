@@ -12,7 +12,7 @@ declare -a configs=(.bash_aliases .gitconfig .gitignore .pryrc .vimrc .warprc)
 # Create soft links for all configuration files in .roaming_profile.
 # Back the specified file up if a copy exists already with the .backup suffix
 for config_file in ${config}; do
-  ln --backup=backup -s .roaming_profile/${config_file}
+  ln --backup --suffix=backup -s .roaming_profile/${config_file}
 done
 
 # Install Oh-My-Zsh
