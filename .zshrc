@@ -53,8 +53,10 @@ plugins=(git dircycle wd)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# Any additional path settings should be added to the user's ~/.bash_local file to preserve
+# cross-install compatibility
+export RVM_PATH="$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:RVM_PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
