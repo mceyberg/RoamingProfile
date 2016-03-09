@@ -26,6 +26,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
 
+" Color scheme package
+Plugin 'flazz/vim-colorschemes'
 " Git integration
 Plugin 'tpope/vim-fugitive'
 " Nerd tree
@@ -82,4 +84,10 @@ set number
 
 " show existing tab with 4 spaces width
 set tabstop=4
+
+" Enable NerdTree with Control+N
+map <C-n> :NERDTreeToggle<CR>
+
+" Close Vim even if NerdTree is open in the left window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
