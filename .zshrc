@@ -90,6 +90,10 @@ if [ -f ~/.bash_aliases ]; then
   source ~/.bash_aliases
 fi
 
+if [ -f ~/.profile ]; then
+  source ~/.profile
+fi
+
 # Add a configuration file for profile-specific configurations that should
 # not be committed to source control
 if [ -f ~/.bash_local ]; then
