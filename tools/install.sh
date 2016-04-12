@@ -29,9 +29,6 @@ for config_file in ${configs[*]}; do
   ln -s .roaming_profile/${config_file}
 done
 
-# Install Oh-My-Zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 # Install Vundle
 env git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
@@ -45,6 +42,13 @@ if [[ "uname" == 'Darwin' ]]; then
   ln -s $sublime_app_dir/Default\ \(OSX\).sublime-keymap ~/$sublime_app_dir/
   ln -s $sublime_app_dir/Preferences.sublime-settings ~/$sublime_app_dir/
 fi
+
+# Install Oh-My-Zsh. This needs to be run last since it starts up a new zsh instance at the end of its run.
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# Remove the oh-my-zsh generated config
+rm ~/.zshrc
+mv ~/.zshrc.pre* ~/.zshrc
+
 
 popd
 
