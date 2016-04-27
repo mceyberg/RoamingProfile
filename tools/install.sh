@@ -10,6 +10,7 @@ if [[ -d ~/.roaming_profile ]]; then
 	echo "Roaming profile found, leaving untouched."
 	pushd .roaming_profile
 	git fetch
+	git pull
 	popd
 else
 	env git clone https://github.com/mceyberg/RoamingProfile.git ~/.roaming_profile
@@ -39,8 +40,16 @@ vim +PluginInstall +qall
 # If we are running OS X, deploy Sublime and ITerm settings
 if [[ "uname" == 'Darwin' ]]; then
   sublime_app_dir="Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
-  ln -s $sublime_app_dir/Default\ \(OSX\).sublime-keymap ~/$sublime_app_dir/
-  ln -s $sublime_app_dir/Preferences.sublime-settings ~/$sublime_app_dir/
+  keymap_file="Default\ \(OSX\).sublime-keymap"
+  prefs_file="Preferences.sublime-settings"
+
+  if [ -d ~/$sublime_app_dir/ ]; then
+	echo "Sublime preference files found, attempting to keep them and overwriting existing configurations. To revert changes, use git."
+	mv -i ~/$sublime_app_dir/$keymap_file $sublime_app_dir/
+	mv -i ~/$sublime_app_dir/$prefs_file $sublime_app_dir/
+  fi
+  ln -s $sublime_app_dir/$keymap_file ~/$sublime_app_dir/
+  ln -s $sublime_app_dir/$prefs_file ~/$sublime_app_dir/
 fi
 
 # Install Oh-My-Zsh. This needs to be run last since it starts up a new zsh instance at the end of its run.
