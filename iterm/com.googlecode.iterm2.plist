@@ -224,7 +224,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>269 110 924 485 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>151 355 570 376 0 0 1280 777 </string>
+	<string>3 97 1095 636 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>50 55 1137 650 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
@@ -955,12 +955,14 @@
 			<string>/Users/mceyberg</string>
 		</dict>
 	</array>
+	<key>NoSyncNeverRemindPrefsChangesCopy</key>
+	<true/>
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>469416033.13292003</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>470789704.37659502</real>
+	<real>475653308.69128501</real>
 	<key>OnlyWhenMoreTabs</key>
-	<true/>
+	<false/>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenBookmark</key>
@@ -1005,9 +1007,9 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/mceyberg/.iterm</string>
+	<string>/Users/mceyberg/.roaming_profile/iterm</string>
 	<key>PromptOnQuit</key>
-	<true/>
+	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<false/>
 	<key>RightCommand</key>
@@ -1021,7 +1023,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-12-02T22:36:04Z</date>
+	<date>2016-02-01T03:13:42Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>

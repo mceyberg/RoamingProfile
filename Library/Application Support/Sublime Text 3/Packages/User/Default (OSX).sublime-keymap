@@ -12,6 +12,10 @@
 	{ "keys": ["ctrl+y"], "command": "redo" },
 
 	{ "keys": ["ctrl+w"], "command": "close" },
+	
+	{ "keys": ["ctrl+x"], "command": "cut" },
+	{ "keys": ["ctrl+c"], "command": "copy" },
+	{ "keys": ["ctrl+v"], "command": "paste" },
 
 	{ "keys": ["f1"], "command": "goto_definition" },
 
@@ -25,9 +29,17 @@
 	{ "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"} },
 	{ "keys": ["ctrl+shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"} },
 
-	{ "keys": ["ctrl+shfit+f"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+	{ "keys": ["ctrl+f"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
 
 
 	{ "keys": ["super+up"], "command": "swap_line_up" },
 	{ "keys": ["super+down"], "command": "swap_line_down" },
+
+	{ "keys": ["ctrl+shift+r"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+
+	{ "keys": ["shift+tab"], "command": "unindent" },
+
+	{ "keys": ["ctrl+alt+left"], "command": "move", "args": {"by": "subwords", "forward": false} },
+	{ "keys": ["ctrl+alt+right"], "command": "move", "args": {"by": "subword_ends", "forward": true} },
+	{ "keys": ["ctrl+shift+i"], "command": "reindent" },
 ]
