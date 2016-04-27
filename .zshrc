@@ -53,7 +53,10 @@ plugins=(git dircycle wd)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# Any additional path settings should be added to the user's ~/.bash_local file to preserve
+# cross-install compatibility
+export RVM_PATH="$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:RVM_PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -83,6 +86,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source ~/.bash_aliases
+if [ -f ~/.bash_aliases ]; then
+  source ~/.bash_aliases
+fi
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+if [ -f ~/.profile ]; then
+  source ~/.profile
+fi
+
+# Add a configuration file for profile-specific configurations that should
+# not be committed to source control
+if [ -f ~/.bash_local ]; then
+  source ~/.bash_local
+fi
+
