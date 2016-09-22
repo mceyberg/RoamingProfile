@@ -18,10 +18,6 @@
 
 
 	{ "keys": ["ctrl+w"], "command": "close" },
-	
-	{ "keys": ["ctrl+x"], "command": "cut" },
-	{ "keys": ["ctrl+c"], "command": "copy" },
-	{ "keys": ["ctrl+v"], "command": "paste" },
 
 	{ "keys": ["f1"], "command": "goto_definition" },
 
