@@ -11,6 +11,12 @@
 	// Overwrites default key binding to yank
 	{ "keys": ["ctrl+y"], "command": "redo" },
 
+	// Windows-style cut-copy-paste
+	{ "keys": ["ctrl+x"], "command": "cut" },
+	{ "keys": ["ctrl+c"], "command": "copy" },
+	{ "keys": ["ctrl+v"], "command": "paste" },
+
+
 	{ "keys": ["ctrl+w"], "command": "close" },
 	
 	{ "keys": ["ctrl+x"], "command": "cut" },

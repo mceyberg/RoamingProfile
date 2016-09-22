@@ -49,14 +49,13 @@ ZSH_THEME="candy2"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dircycle wd)
+plugins=(git dircycle wd docker osx mvn sublime brew)
 
 # User configuration
 
 # Any additional path settings should be added to the user's ~/.bash_local file to preserve
 # cross-install compatibility
-export RVM_PATH="$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:RVM_PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -100,3 +99,4 @@ if [ -f ~/.bash_local ]; then
   source ~/.bash_local
 fi
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
