@@ -1,6 +1,7 @@
 alias ll='ls -alh'
 alias gc='git commit'
 alias gs='git status'
+alias gp='git pull --ff-only'
 alias di='docker images'
 alias dl='docker logs -f'
 alias dp='docker ps'
@@ -15,5 +16,4 @@ docker_exec_bash() {
 	docker exec -it $1 /bin/bash
 }
 alias deb=docker_exec_bash 
-
 alias docker-clean='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
