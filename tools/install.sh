@@ -52,6 +52,10 @@ if [[ "uname" == 'Darwin' ]]; then
   ln -s $sublime_app_dir/$prefs_file ~/$sublime_app_dir/
 fi
 
+# Install Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+brew install wget
+
 # Install Oh-My-Zsh. This needs to be run last since it starts up a new zsh instance at the end of its run.
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # Remove the oh-my-zsh generated config
