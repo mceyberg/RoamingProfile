@@ -37,7 +37,7 @@ vim +source % +qall
 # Run the 'PluginInstall' command to load all the plugins set in .vimrc
 vim +PluginInstall +qall
 
-# If we are running OS X, deploy Sublime and ITerm settings
+# If we are running OS X, deploy Sublime and ITerm settings and install Homebrew
 if [[ "uname" == 'Darwin' ]]; then
   sublime_app_dir="Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
   keymap_file="Default\ \(OSX\).sublime-keymap"
@@ -50,11 +50,11 @@ if [[ "uname" == 'Darwin' ]]; then
   fi
   ln -s $sublime_app_dir/$keymap_file ~/$sublime_app_dir/
   ln -s $sublime_app_dir/$prefs_file ~/$sublime_app_dir/
-fi
 
-# Install Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
-brew install wget
+  # Install Homebrew
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+  brew install wget
+fi
 
 # Install Oh-My-Zsh. This needs to be run last since it starts up a new zsh instance at the end of its run.
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
