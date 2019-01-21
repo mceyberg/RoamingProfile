@@ -100,3 +100,8 @@ if [ -f ~/.bash_local ]; then
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# nvm stuff.
+export NVM_DIR="/Users/mceyberg/.nvm"
+source "/usr/local/opt/nvm/nvm.sh"
+

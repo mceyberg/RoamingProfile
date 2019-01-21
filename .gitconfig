@@ -12,3 +12,4 @@
 	st = status
 [core]
 	editor = /usr/bin/vim
+	autocrlf = input
