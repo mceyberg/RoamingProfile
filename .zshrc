@@ -100,8 +100,10 @@ if [ -f ~/.bash_local ]; then
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.jenv/bin" # Add jenv to PATH
 
 # nvm stuff.
 export NVM_DIR="/Users/mceyberg/.nvm"
 source "/usr/local/opt/nvm/nvm.sh"
 
+eval "$(jenv init -)"
