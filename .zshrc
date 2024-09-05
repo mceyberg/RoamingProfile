@@ -49,7 +49,7 @@ ZSH_THEME="candy2"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dircycle wd docker osx mvn sublime brew kubectl gradle)
+plugins=(git dircycle wd docker macos mvn sublime brew kubectl gradle)
 
 # User configuration
 
@@ -102,6 +102,6 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # nvm stuff.
-export NVM_DIR="/Users/mceyberg/.nvm"
-source "/usr/local/opt/nvm/nvm.sh"
+export NVM_DIR="/Users/meyberg/.nvm"
+source "/opt/homebrew/opt/nvm/nvm.sh"
 
